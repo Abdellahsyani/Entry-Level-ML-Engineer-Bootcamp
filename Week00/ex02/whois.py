@@ -16,4 +16,4 @@ def checks(arg):
 if len(sys.argv) > 1:
     checks(sys.argv[1])
 else:
-    print("no argumenet")
+    print("no argument")
