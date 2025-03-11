@@ -31,4 +31,5 @@ def text_analyzer(text):
     print(f"{space} space(s)")
     print(f"{pun} punctuation mark(s)")
 
-text_analyzer(sys.argv[1])
+if __name__=="__main__":
+    text_analyzer(sys.argv[1])
