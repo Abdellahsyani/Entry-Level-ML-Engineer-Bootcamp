@@ -2,9 +2,18 @@ import requests
 from bs4 import BeautifulSoup
 
 
-URL = "https://www.octoparse.com/template/craigslist-scraper"
+URL = "https://data.1337ai.org/"
 
-r = requests.get(URL)
-soup = BeautifulSoup(r.content, 'html5lib')
+page = requests.get(URL)
+soup = BeautifulSoup(page.content, "html.parser")
+tr = soup.find_all('tr')
 
-print(soup.prettify())
+list1 = []
+
+for tag in tr:
+    li = []
+    r = tag.find_all('th')
+    li.append(r)
+    if (li):
+        list1.append(li)
+print(list1)
